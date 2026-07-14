@@ -1,2 +1,2 @@
-# gridfix.github.io
+# gridfix
 GridFix Privacy Policy
