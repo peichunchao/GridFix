@@ -1,2 +1,0 @@
-# gridfix
-GridFix Privacy Policy
