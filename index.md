@@ -42,7 +42,7 @@ GridFix 不收集任何人的資料，包括兒童。
 
 聯絡方式
 
-如有任何疑問，請來信：exige.240r@gmail.com
+如有任何疑問，請來信：info@gridfixapp.com
 
 
 English
@@ -84,4 +84,5 @@ If this policy changes, we will update this page and revise the "Last updated" d
 
 Contact
 
-Questions? Email: exige.240r@gmail.com
+Questions? Email: info@gridfixapp.com
+
