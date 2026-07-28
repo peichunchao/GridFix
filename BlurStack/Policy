@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BlurStack 隱私權政策</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang TC", sans-serif;
+    line-height: 1.75;
+    color: #1a1a1a;
+    background: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8ea; background: #101014; }
+    a { color: #7aa2ff; }
+    hr { border-color: #2a2a32; }
+    .meta { color: #9a9aa2; }
+  }
+  h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2.25rem; }
+  .meta { color: #6a6a72; font-size: 0.9rem; margin-top: 0; }
+  hr { border: none; border-top: 1px solid #e4e4e8; margin: 2rem 0; }
+  ul { padding-left: 1.25rem; }
+  li { margin-bottom: 0.4rem; }
+  code { font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<h1>BlurStack 隱私權政策</h1>
+<p class="meta">最後更新：2026 年 7 月 28 日</p>
+
+<hr>
+
+<h2>總則</h2>
+<p>BlurStack（以下稱「本 App」）是一款將 iPhone Live Photo 的影格疊合成長時間曝光照片的工具。<strong>本 App 不收集、不儲存、也不傳輸任何個人資料。</strong>所有影像處理都在你的裝置上完成。</p>
+
+<h2>照片的存取方式</h2>
+<p>本 App 使用 Apple 提供的系統照片選取器（PHPickerViewController）。這代表：</p>
+<ul>
+  <li>本 App <strong>沒有</strong>你的相簿讀取權限，也不會要求這項權限。</li>
+  <li>本 App 只能取得你在系統選取器中主動選擇的那一張 Live Photo，看不到你相簿中的任何其他內容。</li>
+  <li>選取的照片只在合成過程中暫存於裝置的暫存目錄，App 關閉後由系統清除。</li>
+  <li>照片內容<strong>不會</strong>被上傳到任何伺服器，本 App 也沒有任何自建的後端服務。</li>
+</ul>
+
+<h2>寫入相簿</h2>
+<p>當你按下「儲存到相簿」時，本 App 會要求「加入照片」（Add Photos Only）權限，用來把合成好的成品寫回你的相簿。這項權限只允許新增，本 App 無法藉此讀取或修改你既有的照片。你可以拒絕這項權限，並改用「其他方式匯出」把成品分享到其他 App。</p>
+
+<h2>拍攝資訊（EXIF）的處理</h2>
+<p>為了讓成品保有與原始照片一致的拍攝資訊，本 App 在輸出時會沿用原始 Live Photo 的 metadata，包含相機型號、鏡頭、快門、以及<strong>拍攝地點（GPS）</strong>，並額外寫入一行說明這張照片是由 BlurStack 合成的註記。</p>
+<p>這些資訊只存在於你裝置上的輸出檔案中，本 App 不會讀取、分析或傳送它們。若你不希望成品包含位置資訊，可以在 iOS 的「照片」App 中分享時關閉「位置」選項，或事先於「設定 → 隱私權與安全性 → 定位服務 → 相機」關閉相機的定位。</p>
+
+<h2>購買與訂閱</h2>
+<p>本 App 的付費功能透過 Apple 的 App 內購買（StoreKit）處理。所有付款資訊由 Apple 處理，本 App 不會接觸、也無法取得你的付款方式、信用卡號或 Apple 帳號資訊。本 App 僅向 Apple 查詢「這個裝置目前是否具備有效的購買權限」這一項結果。</p>
+
+<h2>分析與追蹤</h2>
+<p>本 App <strong>不含</strong>任何第三方分析、廣告或追蹤 SDK，不會建立使用者識別碼，也不會跨 App 或跨網站追蹤你。</p>
+
+<h2>兒童隱私</h2>
+<p>本 App 不會刻意收集任何年齡層使用者的個人資料，包含 13 歲以下之兒童。</p>
+
+<h2>本政策的變更</h2>
+<p>若本政策有所變更，更新後的版本會發佈於本頁面，並更新頁首的日期。</p>
+
+<h2>聯絡方式</h2>
+<p>對本政策有任何疑問，請來信：<a href="mailto:exige.240r@gmail.com">exige.240r@gmail.com</a></p>
+
+</body>
+</html>
