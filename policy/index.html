@@ -1,77 +1,463 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GridFix Privacy Policy</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+<meta name="robots" content="index, follow">
+<meta name="description" content="GridFix 隱私權政策：本 App 不蒐集任何個人資料，所有照片與影片處理皆在您的裝置上完成。GridFix Privacy Policy.">
+<title>隱私權政策 Privacy Policy — GridFix</title>
 <style>
-  :root { color-scheme: light dark; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "PingFang SC",
-      "Heiti TC", "Microsoft JhengHei", "Noto Sans TC", "Noto Sans CJK TC",
-      "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.75;
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 32px 20px 80px;
-    color: #1a1a1a;
-    background: #ffffff;
+  :root {
+    --bg: #ffffff;
+    --surface: #f6f7f8;
+    --border: #e3e5e8;
+    --text: #16191d;
+    --muted: #5c636b;
+    --accent: #0a7d6e;
+    --accent-soft: rgba(10, 125, 110, 0.09);
+    --code-bg: #eef0f2;
   }
   @media (prefers-color-scheme: dark) {
-    body { color: #e8e8e8; background: #111111; }
-    h1, h2 { color: #ffffff; }
-    hr { border-color: #333; }
-    a { color: #6ea8fe; }
+    :root {
+      --bg: #0d1011;
+      --surface: #161a1c;
+      --border: #262c2f;
+      --text: #e8ebec;
+      --muted: #9aa3a8;
+      --accent: #35c9b2;
+      --accent-soft: rgba(53, 201, 178, 0.12);
+      --code-bg: #1d2225;
+    }
   }
-  h1 { font-size: 1.7rem; margin-bottom: 4px; }
-  h2 { font-size: 1.25rem; margin-top: 2em; }
-  .updated { color: #888; font-size: 0.95rem; margin-top: 0; }
-  .lang-label { color: #888; font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 2.5em; }
-  ul { padding-left: 1.3em; }
-  hr { border: none; border-top: 1px solid #ddd; margin: 2.5em 0; }
-  a { color: #0066cc; }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 0 20px 88px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
+                 "PingFang TC", "Microsoft JhengHei", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 720px; margin: 0 auto; }
+
+  header.masthead {
+    padding: 56px 0 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .brand .mark { color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+  .langbar {
+    margin-top: 22px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .langbar a {
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid transparent;
+    border-radius: 999px;
+    padding: 6px 14px;
+    transition: border-color .15s ease;
+  }
+  .langbar a:hover { border-color: var(--accent); }
+
+  h1 {
+    font-size: 30px;
+    line-height: 1.3;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 21px;
+    line-height: 1.4;
+    margin: 52px 0 14px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+    letter-spacing: -0.005em;
+  }
+  h3 {
+    font-size: 17px;
+    margin: 30px 0 8px;
+    color: var(--accent);
+  }
+
+  .meta {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0 0 26px;
+  }
+  .meta strong { color: var(--text); font-weight: 600; }
+
+  p { margin: 0 0 16px; }
+
+  ul, ol { margin: 0 0 16px; padding-left: 1.35em; }
+  li { margin-bottom: 8px; }
+  li > ol { margin-top: 8px; }
+
+  a { color: var(--accent); }
+
+  strong { font-weight: 600; }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.86em;
+    background: var(--code-bg);
+    border-radius: 5px;
+    padding: 2px 6px;
+    word-break: break-all;
+  }
+
+  .lead {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 0 0 24px;
+  }
+  .lead p:last-child { margin-bottom: 0; }
+
+  .note {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 20px 0;
+    font-size: 15px;
+    color: var(--muted);
+  }
+  .note p:last-child { margin-bottom: 0; }
+
+  /* Wide content scrolls inside its own container; the page body never does. */
+  .tablewrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 0 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 460px;
+    font-size: 15px;
+  }
+  th, td {
+    text-align: left;
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  thead th {
+    background: var(--surface);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .contact {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-top: 16px;
+  }
+  .contact a { font-weight: 600; }
+
+  footer.pagefoot {
+    margin-top: 64px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .divider {
+    margin: 72px 0 0;
+    border: none;
+    border-top: 2px solid var(--border);
+  }
+
+  @media (max-width: 520px) {
+    body { font-size: 16px; padding: 0 16px 64px; }
+    header.masthead { padding-top: 36px; }
+    h1 { font-size: 25px; }
+    h2 { font-size: 19px; margin-top: 42px; }
+  }
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<h1>GridFix Privacy Policy</h1>
-<p class="updated">Last updated: 2026-07-15</p>
+  <header class="masthead">
+    <span class="brand"><span class="mark">###</span>GridFix</span>
+    <nav class="langbar">
+      <a href="#zh">中文</a>
+      <a href="#en">English</a>
+    </nav>
+  </header>
 
-<hr>
+  <!-- ===================== 繁體中文 ===================== -->
+  <main id="zh" lang="zh-Hant">
 
-<h2>Summary</h2>
-<p>GridFix does not collect, store, or transmit any of your personal data. All photo processing happens entirely on your device.</p>
+    <h1>GridFix 隱私權政策</h1>
+    <p class="meta">
+      <strong>生效日期：</strong>2026 年 8 月 3 日<br>
+      <strong>適用版本：</strong>GridFix 1.1 起
+    </p>
 
-<h2>What data we collect</h2>
-<p>None. GridFix:</p>
-<ul>
-  <li>Requires no account or registration</li>
-  <li>Does not collect your name, email, or any personally identifiable information</li>
-  <li>Contains no analytics, tracking, or advertising SDKs</li>
-  <li>Never uploads your photos or any other data to any server</li>
-</ul>
+    <p>GridFix（以下稱「本 App」）是一款在 iPhone 與 iPad 上進行照片透視校正、鏡頭變形校正，並提供即時校正拍攝與錄影功能的工具。</p>
+    <p>本政策說明本 App 會取用哪些裝置資料、為什麼取用、以及這些資料去了哪裡。</p>
 
-<h2>Photo access</h2>
-<p>GridFix reads a photo only when you actively select it through the system photo picker. When saving a corrected photo, it requests add-only access to save the result back to your photo library. All reading, editing, and saving happens on your device; your photos never leave it.</p>
+    <h2>一、總則：我們不蒐集您的個人資料</h2>
 
-<h2>In-app purchases</h2>
-<p>Subscriptions and the lifetime purchase are processed by Apple’s App Store (StoreKit). We never receive your payment information. See <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a> for how Apple handles this data.</p>
+    <div class="lead">
+      <p><strong>本 App 不會蒐集、上傳、儲存或分享您的任何個人資料。</strong></p>
+    </div>
 
-<h2>Data stored locally</h2>
-<p>GridFix stores only app preferences (such as loupe position) and the free tier’s daily export count, on your device. This data never leaves your device and is removed when you delete the app.</p>
+    <ul>
+      <li>本 App <strong>沒有伺服器</strong>，也<strong>不會發出任何網路請求</strong>來傳送您的資料。</li>
+      <li>本 App <strong>未內嵌任何第三方分析、廣告或追蹤 SDK</strong>。</li>
+      <li>本 App <strong>不會蒐集廣告識別碼（IDFA）</strong>，也不會進行跨 App 或跨網站的使用者追蹤。</li>
+      <li>您的照片、影片與所有編輯內容，<strong>全程只在您的裝置上處理</strong>，不會離開裝置。</li>
+    </ul>
 
-<h2>Children’s privacy</h2>
-<p>GridFix does not collect data from anyone, including children.</p>
+    <p>您在 App Store 上看到的「未蒐集資料」標示，即反映上述事實。</p>
 
-<h2>Changes to this policy</h2>
-<p>If this policy changes, we will update this page and revise the “Last updated” date.</p>
+    <h2>二、本 App 會取用的裝置權限</h2>
 
-<h2>Contact</h2>
-<p>Questions? Email: info@gridfixapp.com</p>
+    <p>以下權限都會在您第一次使用相關功能時，由系統向您詢問。您可以隨時到「設定」→「GridFix」中調整或撤銷。</p>
 
+    <h3>1. 相機</h3>
+    <ul>
+      <li><strong>用途：</strong>提供「即時校正拍攝」的取景畫面與拍照、錄影功能。</li>
+      <li><strong>處理方式：</strong>影像串流僅在裝置本機記憶體中處理，用於即時計算並顯示校正後的畫面。</li>
+      <li><strong>不會：</strong>上傳、備份或傳送任何影格到裝置以外的任何地方。</li>
+    </ul>
 
+    <h3>2. 麥克風</h3>
+    <ul>
+      <li><strong>用途：</strong>僅在您主動切換到<strong>錄影模式</strong>時使用，用於為影片收音。</li>
+      <li><strong>時機：</strong>只拍照不錄影的使用者，永遠不會被詢問麥克風權限。</li>
+      <li><strong>處理方式：</strong>收到的音訊直接寫入您正在錄製的影片檔案中，不另行儲存、分析或傳送。</li>
+      <li><strong>拒絕的後果：</strong>您仍可正常錄影，只是影片沒有聲音。</li>
+    </ul>
+
+    <h3>3. 照片（完整存取）</h3>
+    <ul>
+      <li>
+        <strong>用途：</strong>
+        <ol>
+          <li>將您拍攝的照片與影片存入系統「照片」App；</li>
+          <li>當您在 App 內相簿中標示「喜好」時，將該標記同步寫回系統「照片」中的同一張照片或影片。</li>
+        </ol>
+      </li>
+      <li><strong>為什麼需要「完整存取」而非「僅加入」：</strong>iOS 的「僅加入」權限只能寫入新項目，無法修改既有項目的屬性。喜好標記的同步屬於修改，因此必須使用完整存取權限。</li>
+      <li><strong>本 App 不會：</strong>瀏覽、讀取、索引、分析或傳送您相簿中的其他照片。本 App 只會接觸「由本 App 建立的項目」以及「您主動透過系統選取器挑選的項目」。</li>
+      <li><strong>本 App 不會刪除您相簿中的任何項目。</strong>App 內相簿的「移除」只影響本 App 當次拍攝的清單，系統「照片」中的檔案不受影響。</li>
+    </ul>
+
+    <h3>4. 動作與方向感測器（陀螺儀／加速度計）</h3>
+    <ul>
+      <li><strong>用途：</strong>讀取重力方向，計算手機的俯仰與水平傾斜角度，據以即時校正取景畫面的透視變形，並顯示角度讀數與扶正提示。</li>
+      <li><strong>處理方式：</strong>感測器讀數即時運算後即丟棄，不會被記錄成軌跡或歷史。</li>
+      <li><strong>例外：</strong>若您使用「水平感測校正」功能，本 App 會將您量測到的<strong>固定偏移角度</strong>（兩個數值）與校正時間儲存在裝置本機，用於後續全程扣除。此資料不含位置、不含動作歷程，也不會離開裝置。</li>
+      <li><strong>本 App 不使用定位服務，也不會取得您的所在位置。</strong></li>
+    </ul>
+
+    <h3>5. 檔案</h3>
+    <ul>
+      <li><strong>用途：</strong>讓您從「檔案」App 或 iCloud 雲碟匯入照片（含 RAW 格式）。</li>
+      <li><strong>範圍：</strong>本 App 僅能存取<strong>您主動在系統選取器中挑選的檔案</strong>，無法瀏覽其他內容。</li>
+    </ul>
+
+    <h2>三、儲存在您裝置上的資料</h2>
+
+    <p>以下資料儲存在您的裝置本機，不會上傳：</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>資料</th><th>儲存位置</th><th>用途</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>格線模式、自動轉正水平等拍攝偏好</td><td>UserDefaults</td><td>記住您的設定</td></tr>
+          <tr><td>放大鏡位置偏好</td><td>UserDefaults</td><td>記住您的設定</td></tr>
+          <tr><td>水平感測校正的偏移值與校正時間</td><td>UserDefaults</td><td>扣除感測器固定誤差</td></tr>
+          <tr><td>評分提示的計次與上次提示時間</td><td>UserDefaults</td><td>避免重複打擾</td></tr>
+          <tr><td>免費版每日輸出次數與日期</td><td>鑰匙圈（Keychain）</td><td>計算免費額度</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>其中每日輸出次數存放於鑰匙圈，是為了讓額度不會因重新安裝而被重置。該項目以 <code>kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly</code> 儲存，<strong>僅限本裝置、不會同步至 iCloud 鑰匙圈</strong>，且僅包含一個次數與一個日期，不含任何可識別您身分的資訊。</p>
+
+    <p>您拍攝的照片與影片，其原始檔案存放於系統「照片」App 中，由您完全掌控。App 內相簿僅在該次相機使用期間存在於記憶體中，關閉相機即清空。</p>
+
+    <h2>四、購買與訂閱</h2>
+    <ul>
+      <li>本 App 的訂閱與買斷購買，全部透過 <strong>Apple 的 App 內購買（StoreKit）</strong> 完成。</li>
+      <li><strong>本 App 不會接觸、傳輸或儲存您的付款資訊</strong>（信用卡號、Apple 帳號密碼等）。這些資料全程由 Apple 處理。</li>
+      <li>本 App 僅從 StoreKit 取得「目前是否具有使用權限」這一項結果，用於解鎖付費功能。此狀態不會被寫入裝置儲存空間，每次都向 StoreKit 重新確認。</li>
+      <li>有關 Apple 如何處理您的購買資料，請參閱 <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple 隱私權政策</a>。</li>
+    </ul>
+
+    <h2>五、分享擴充功能（Share Extension）</h2>
+    <p>當您在「照片」、「檔案」等其他 App 中選擇分享到 GridFix 時，該張照片會透過 iOS 的分享機制傳遞給本 App 進行編輯。此過程完全發生在您的裝置上，不涉及任何網路傳輸。</p>
+
+    <h2>六、兒童隱私</h2>
+    <p>本 App 不蒐集任何個人資料，因此也不會蒐集兒童的個人資料。本 App 不含社群功能、留言、聊天或使用者間的內容分享機制。</p>
+
+    <h2>七、資料保留與刪除</h2>
+    <p>由於本 App 不蒐集任何資料，因此沒有需要向我們申請刪除的資料。</p>
+    <p>若您希望清除本 App 儲存在裝置上的偏好設定，<strong>將本 App 從裝置移除即可</strong>。</p>
+    <div class="note">
+      <p>註：iOS 的鑰匙圈項目在移除 App 時不一定會一併清除。若您需要完整清除，可在移除 App 後重新安裝並於設定中重設，或聯絡我們協助。</p>
+    </div>
+
+    <h2>八、第三方</h2>
+    <p>本 App <strong>未整合任何第三方服務</strong>，包含但不限於：分析工具、當機回報服務、廣告聯播網、社群登入、雲端儲存服務。</p>
+    <p>本 App 中僅有的對外連結為：隱私權政策、使用者授權合約（EULA）、App Store 評分頁與訂閱管理頁。點擊這些連結會開啟 Safari 或 App Store，屆時將適用該網站或 Apple 的隱私權政策。</p>
+
+    <h2>九、政策變更</h2>
+    <p>本政策若有修改，我們會更新本頁上方的生效日期。涉及重大變更時，會於 App 更新說明中一併告知。</p>
+
+    <h2>十、聯絡我們</h2>
+    <p>對本政策有任何疑問，請透過以下方式聯絡：</p>
+    <div class="contact">
+      <p>電子郵件：<a href="mailto:info@gridfixapp.com">info@gridfixapp.com</a></p>
+    </div>
+
+  </main>
+
+  <hr class="divider">
+
+  <!-- ===================== English ===================== -->
+  <main id="en" lang="en">
+
+    <h1>GridFix Privacy Policy</h1>
+    <p class="meta">
+      <strong>Effective date:</strong> 3 August 2026<br>
+      <strong>Applies to:</strong> GridFix 1.1 and later
+    </p>
+
+    <p>GridFix is an iPhone and iPad tool for correcting perspective and lens distortion in photographs, including a live-corrected camera and video recording.</p>
+    <p>This policy sets out what device data the app uses, why, and where it goes.</p>
+
+    <h2>1. Summary: we do not collect your personal data</h2>
+
+    <div class="lead">
+      <p><strong>GridFix does not collect, upload, store, or share any personal data.</strong></p>
+    </div>
+
+    <ul>
+      <li>The app has <strong>no server</strong> and <strong>makes no network requests</strong> to transmit your data.</li>
+      <li>The app contains <strong>no third-party analytics, advertising, or tracking SDKs</strong>.</li>
+      <li>The app does <strong>not</strong> access the advertising identifier (IDFA) and does not track you across apps or websites.</li>
+      <li>Your photos, videos, and every edit you make are processed <strong>entirely on your device</strong> and never leave it.</li>
+    </ul>
+
+    <h2>2. Device permissions</h2>
+
+    <p>Each of these is requested by the system the first time you use the relevant feature. You can change or revoke them at any time in Settings → GridFix.</p>
+
+    <h3>Camera</h3>
+    <p>Used for the live-corrected viewfinder and for taking photos and video. Frames are processed only in device memory and are never uploaded or transmitted.</p>
+
+    <h3>Microphone</h3>
+    <p>Used <strong>only</strong> when you switch to video mode, to record audio into the clip. If you only take photos, you will never be asked for it. Audio is written straight into your recording and is not otherwise stored, analysed, or transmitted. Declining still leaves you a usable silent recording.</p>
+
+    <h3>Photos (full access)</h3>
+    <p>Used to (a) save the photos and videos you capture into the system Photos app, and (b) mirror the “favourite” flag you set inside the app onto that same item in Photos.</p>
+    <p>Full access is required rather than add-only because iOS’s add-only authorisation can create new items but cannot modify existing ones, and setting a favourite is a modification.</p>
+    <p>GridFix does <strong>not</strong> browse, read, index, analyse, or transmit any other photo in your library. It touches only items it created itself, and items you explicitly choose through the system picker. It never deletes anything from your library — “remove” in the in-app gallery affects only that session’s list.</p>
+
+    <h3>Motion sensors</h3>
+    <p>Used to read the direction of gravity, from which the app derives the device’s pitch and roll in order to correct perspective live and to show the angle readout. Readings are used and discarded; no motion history is kept.</p>
+    <p>If you use the sensor calibration feature, the app stores the two measured offset angles and the date on your device, so the same fixed error can be subtracted from later readings. This contains no location and no motion history.</p>
+    <p><strong>GridFix does not use location services.</strong></p>
+
+    <h3>Files</h3>
+    <p>Used to import photos, including RAW, from the Files app or iCloud Drive. The app can access only the files you explicitly select in the system picker.</p>
+
+    <h2>3. Data stored on your device</h2>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Where</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Grid mode, auto-level and other shooting preferences</td><td>UserDefaults</td><td>Remember your settings</td></tr>
+          <tr><td>Loupe corner preference</td><td>UserDefaults</td><td>Remember your settings</td></tr>
+          <tr><td>Sensor calibration offsets and date</td><td>UserDefaults</td><td>Subtract a fixed sensor error</td></tr>
+          <tr><td>Review prompt counters</td><td>UserDefaults</td><td>Avoid asking repeatedly</td></tr>
+          <tr><td>Free-tier daily export count and date</td><td>Keychain</td><td>Enforce the free allowance</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The export count is kept in the keychain so that it is not reset simply by reinstalling. It is stored with <code>kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly</code> — <strong>this device only, never synced to iCloud Keychain</strong> — and consists of one number and one date. It contains nothing that identifies you.</p>
+
+    <p>Photos and videos you capture live in the system Photos app, under your control. The in-app gallery exists only in memory for the duration of one camera session.</p>
+
+    <h2>4. Purchases</h2>
+    <p>All subscriptions and one-time purchases are handled by <strong>Apple’s In-App Purchase (StoreKit)</strong>. GridFix never sees, transmits, or stores your payment details — Apple handles all of that. The app receives only whether you currently hold an entitlement, and that answer is re-checked with StoreKit rather than written to disk.</p>
+    <p>See <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple’s Privacy Policy</a> for how Apple handles purchase data.</p>
+
+    <h2>5. Share extension</h2>
+    <p>When you share a photo to GridFix from another app, the photo is passed to GridFix through iOS’s own sharing mechanism. This happens entirely on your device.</p>
+
+    <h2>6. Children</h2>
+    <p>GridFix collects no personal data, and therefore collects none from children. It contains no social features, comments, chat, or user-to-user sharing.</p>
+
+    <h2>7. Retention and deletion</h2>
+    <p>Because nothing is collected, there is no data to request deletion of. Removing the app from your device clears its stored preferences.</p>
+    <div class="note">
+      <p>Note: iOS does not always clear keychain items when an app is removed. If you need this cleared completely, contact us.</p>
+    </div>
+
+    <h2>8. Third parties</h2>
+    <p>GridFix integrates <strong>no third-party services</strong> — no analytics, no crash reporting, no ad networks, no social sign-in, no cloud storage.</p>
+    <p>The only outbound links in the app are to this privacy policy, the End User Licence Agreement, the App Store review page, and the subscription management page. Following them opens Safari or the App Store, at which point that site’s or Apple’s privacy policy applies.</p>
+
+    <h2>9. Changes</h2>
+    <p>If this policy changes, the effective date above will be updated. Material changes will also be noted in the app’s release notes.</p>
+
+    <h2>10. Contact</h2>
+    <div class="contact">
+      <p>Email: <a href="mailto:info@gridfixapp.com">info@gridfixapp.com</a></p>
+    </div>
+
+  </main>
+
+  <footer class="pagefoot">
+    <p>© 2026 GridFix · <a href="#zh">中文</a> · <a href="#en">English</a></p>
+  </footer>
+
+</div>
 </body>
 </html>
